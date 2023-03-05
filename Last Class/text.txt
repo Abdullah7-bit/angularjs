@@ -1,0 +1,18 @@
+<script>
+
+var app = angular.module('myapp',[3rd party plugins/services]);
+
+app.controller('mycontroller',function($scope){
+  
+    // coding
+
+$scope.x = 10;
+$scope.myarr = arr[];
+$scope.func = myfunction(){
+
+
+     }
+  });
+
+
+</script>

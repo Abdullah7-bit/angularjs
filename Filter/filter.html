@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.js"></script>
+    <style>
+        img{
+            width: 150px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="myctr" ng-init="fname='zeeshan'; lname='Ahmed'; amount=300;" >
+    
+
+     <h1> {{ fname | uppercase  }} </h1>
+     <h1> {{ lname | lowercase  }} </h1>
+     <h1>  {{ amount | currency:'Rs' }}</h1>
+
+     <input type="text" ng-model="mytext" placeholder="search ......">
+
+     <table border="1">
+         <tr>
+             <th>ID</th>
+             <th>Name</th>
+             <th>Profile</th>
+             <th>City</th>
+         </tr>
+         <tr ng-repeat="x in data | filter:mytext | orderBy:'id' | limitTo:'2'">
+            <td>{{ x.id }}</td>
+            <td>{{ x.name }}</td>
+            <td><img ng-src="{{ x.profile }}" alt=""></td>
+            <td>{{ x.city }}</td>
+         </tr>
+     </table>
+
+     <script>
+         // mvc
+         var app = angular.module('myapp',[]);
+         app.controller('myctr',function($scope){
+            $scope.data = [
+                 {'id':101,'name':'ali','profile':'images/01.jpg','city':'karachi'},
+                 {'id':102,'name':'usman','profile':'images/01.jpg','city':'lahore'},
+                 {'id':103,'name':'zeeshan','profile':'images/01.jpg','city':'islambad'},
+                 {'id':104,'name':'ahmed','profile':'images/01.jpg','city':'karachi'}
+            ];
+         });
+     </script>
+
+</body>
+</html>

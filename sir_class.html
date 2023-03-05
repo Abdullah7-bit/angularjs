@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/angular_1_8_2.js"></script>
+   
+</head>
+<body ng-app=""  ng-init="name=''; price=0; qty=0; total=300; dis=0; " ><br><br>
+    
+    <input type="text" ng-model="name" placeholder="enter a name"><br><br>
+
+    
+    <span>Price</span><input type="number" ng-model="price" placeholder="Price"> <br><br>
+    <span>Qty</span><input type="number" ng-model="qty" placeholder="Qty"><br><br>
+    
+    <span>Discount</span><input type="text" ng-model="dis" placeholder="enter discount"><br><br>
+
+    <h1>Your Name is : {{  name  }}</h1>
+    <h1>Your Bill : {{  price + qty * 100 / total  }}</h1>
+
+    <div> {{ 10 * 10 }} </div>
+
+
+</body>
+</html>

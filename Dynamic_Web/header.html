@@ -1,0 +1,119 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+    <script src="js/angular.js"></script>
+
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>    
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function (c) {
+            $('.alert-close').on('click', function (c) {
+                $('.message').fadeOut('slow', function (c) {
+                    $('.message').remove();
+                });
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function (c) {
+            $('.alert-close1').on('click', function (c) {
+                $('.message1').fadeOut('slow', function (c) {
+                    $('.message1').remove();
+                });
+            });
+        });
+    </script>
+</head>
+
+
+<div class="header">
+    <div class="container">
+        <div class="header-top">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
+            </div>
+            <div class="top-nav ">
+                <span class="menu"><img src="images/menu.png" alt=""> </span>
+                <ul class="icon1 sub-icon1">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html"> Products</a></li>
+
+                    <li><a href="#"><i></i></a>
+                        <ul class="sub-icon1 list">
+                            <h3>Recently added items(2)</h3>
+                            <div class="shopping_cart">
+                                <div class="cart_box">
+                                    <div class="message">
+                                        <div class="alert-close"> </div>
+                                        <div class="list_img"><img src="images/15.jpg" class="img-responsive" alt="">
+                                        </div>
+                                        <div class="list_desc">
+                                            <h4><a href="#">velit esse molestie</a></h4>
+                                            <p>Aliquam dignissim porttitor tortor </p>
+                                            <a href="#" class="offer">1 offer applied</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="cart_box">
+                                    <div class="message1">
+                                        <div class="alert-close1"> </div>
+                                        <div class="list_img"><img src="images/16.jpg" class="img-responsive" alt="">
+                                        </div>
+                                        <div class="list_desc">
+                                            <h4><a href="#">velit esse molestie</a></h4>
+                                            <p>Aliquam dignissim porttitor tortor </p>
+                                            <a href="#" class="offer">1 offer applied</a>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check_button"><a href="cart.html">View Cart</a></div>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </li>
+                </ul>
+                <!--script-->
+                <script>
+                    $("span.menu").click(function () {
+                        $(".top-nav ul").slideToggle(500, function () {});
+                    });
+                </script>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="container">
+        <h1>Our clothing , your comfort</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua.</p>
+        <a href="#content" class="scroll down"><img src="images/arr.png" alt=""></a>
+    </div>
+</div>

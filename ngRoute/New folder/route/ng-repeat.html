@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG-Repeat</title>
+    <script src="angular.js"></script>
+    <script src="mymodule.js"></script>
+    <script src="angular_min.js"></script>
+    <script src="angular_route.js"></script>
+    <!-- <link rel="stylesheet" href="index.html"> -->
+</head>
+<body ng-app="myapp" ng-controller="myctr">
+
+    <div class="container-fluid">
+        <div class="container" id="pricing">
+            <div class="row p-lg-2">
+                <div class="col-lg-4 mt-lg-3" ng-repeat="item in dat">
+                    <div class="card" style="width: 18rem;" >
+                        <div class="card-body">
+                            <h4 class="card-title">{{item.product}}</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">{{item.category}}</h6>
+                            <h5>Description: </h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <h6>Seller Name: </h6>    
+                            <p>{{item.seller}}</p>  
+                            <h6>Location: </h6>    
+                            <p>{{item.location}}</p>    
+                            <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+
+</body>
+</html>

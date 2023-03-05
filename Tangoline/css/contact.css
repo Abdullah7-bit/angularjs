@@ -1,0 +1,60 @@
+/* .container-fluid{
+    background-image:url(images/keybord\ mouse.jpg) ;
+} */
+
+
+/* div{
+    background-image:url(images/keybord.jpg) ;
+} */
+
+.container-fluid {
+    width: 80%;
+    height: 100%;
+    background: url("images/controler.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 8px;
+}
+
+h1 {
+    font-family: Optima, sans-serif;
+}
+
+
+/* font Awesome */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
+    /* text-align: center; */
+    text-decoration: none;
+    /* margin: 5px 2px; */
+    /* margin-left: 20px;   */
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    /* background: ; */
+    color: white;
+}
+
+.fa-twitter {
+    /* background: ; */
+    color: white;
+}
+
+.fa-youtube {
+    /* background: ; */
+    color: white;
+}
+
+.fa-instagram {
+    /* background: ; */
+    color: white;
+}

@@ -1,0 +1,37 @@
+Basic Events:
+
+
+
+
+onclick
+
+
+effect
+fadeIn
+fadeOut
+SlideUp
+SlideDown
+slidetoggler
+hide
+show
+toggle
+
+
+
+
+event
+onkeyup
+onkeydown
+onmousemove
+onmouseover
+
+
+Advance Events:
+drag&drop ui
+On 
+AddClass
+RemoveClass
+Scroll
+Filter
+Animate
+plugins

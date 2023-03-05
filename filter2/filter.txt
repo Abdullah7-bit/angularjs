@@ -1,0 +1,21 @@
+5:22 AM 8/20/2021
+Filter in Angular ( Searching, sorting )
+
+Uppercase
+lowercase
+limitto
+text
+currency
+orderby
+
+used 
+Filter | Sign  -  ng-repeat or  {{ expression }}
+
+lastName | lowercase
+x in names | orderBy:'country'
+price | currency
+filter : test
+| limitTo : 3
+
+Hide / Show - Angular JS
+ng-hide="myVar"

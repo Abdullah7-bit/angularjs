@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+    integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+    integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="angular.js"></script>
+</head>
+
+<body ng-app="myapp" ng-controller="myctr">
+  <div class="container">
+
+
+    <header class="py-3 mb-4 border-bottom">
+      <div class="container d-flex flex-wrap justify-content-center">
+        <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+          <span class="fs-4">Click the Button Below.</span>
+        </a>
+      </div>
+    </header>
+
+
+
+
+    <button class="d-grid gap-2 col-6 mx-auto btn btn-success" type="button" ng-model="x"
+      ng-click="myfunctionx()">Food</button>
+
+    <button class="d-grid gap-2 col-6 mx-auto mt-3 btn btn-danger" type="button" ng-model="y"
+      ng-click="myfunctiony()">Sports</button>
+
+
+
+
+    <div class="container" ng-show="x">
+      <div class="row" id="Food">
+        <h4 class="text-center m-3">Food.</h4>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="./images/paratha.jpg" class="card-img-top" style="height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Pakistani Paratha</h5>
+              <p class="card-text">Paratha with juicy crushed patty inside.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card" style="width: 18rem;">
+            <img src="./images/kbb.jpg" class="card-img-top" style="height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Kebab</h5>
+              <p class="card-text">From he famous streets of Karachi to your table.</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card  h-100" style="width: 18rem;">
+            <img src="./images/kheer.jpg" class="card-img-top" style="height: 250px;">
+            <div class="card-body">
+              <h5 class="card-title">Kheer</h5>
+              <p class="card-text">is it sour or sweet inside?</p>
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container" ng-show="y">
+      <div class="row" id="Sports">
+        <h4 class="text-center m-3">Sports</h4>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/ball.jpg" class="card-img-top" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Hard-Ball</h5>
+                    <p class="card-text">Play cricket with friends on holidays.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/bat.jpg" class="card-img-top" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Cricket Bat</h5>
+                    <p class="card-text">You can see this bat in the hands of legends.</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <img src="./images/foot.jpg" class="card-img-top" style="height: 250px;">
+                <div class="card-body">
+                    <h5 class="card-title">Football</h5>
+                    <p class="card-text">Play football to cheerup your weekends. </p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+  <script>
+    var app = angular.module('myapp', []);
+    app.controller('myctr', function ($scope) {
+      $scope.x;
+      $scope.y;
+
+      $scope.myfunctionx = function () {
+
+        $scope.x = true;
+      };
+      $scope.myfunctiony = function () {
+
+        $scope.y = true;
+      }
+
+    });
+  </script>
+
+</body>
+
+</html>

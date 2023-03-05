@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="angular.js"></script>
+     <script src="mymodule.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctr" >
+    
+    <input type="number" ng-model="x">
+    <input type="number" ng-model="y">
+
+    value of scope : {{ x + y}}
+
+   
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+        <tr ng-repeat="item in emp">
+            <td>{{ item.id }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.city }}</td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>

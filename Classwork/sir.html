@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="angular.js"></script>
+</head> 
+<body ng-app="myapp" ng-controller="myctr">
+    
+
+     <input type="checkbox" ng-model="x" >
+ 
+     <div ng-show="x">
+        <p >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam itaque impedit ex accusantium, ullam possimus sed est cumque quae maiores tempore quos unde fugiat illum exercitationem harum vero! Dolorem, ipsum.
+        </p>
+
+        <h1>Paragraph</h1>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+        </ul>
+    
+     </div>
+  
+     <button type="button" ng-click="myfunction()">click</button>
+    <h1>Count: {{ y }}</h1>
+    
+    <script>
+
+       var app = angular.module('myapp',[]);
+       app.controller('myctr',function($scope){
+        // hide / show  
+        $scope.x = false;
+
+        $scope.y = 0;
+
+        // functions angular 
+        $scope.myfunction = function(){
+            
+             $scope.y++;
+        }
+
+       });
+
+    </script>
+
+</body>
+</html>

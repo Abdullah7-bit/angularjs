@@ -1,0 +1,12 @@
+{
+    "records":[
+        {
+            "name":"ahmed",
+            "age":20
+        },
+        {
+            "name": "zeeshan",
+            "age": 30
+        }
+    ]
+}

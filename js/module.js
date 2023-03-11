@@ -2,14 +2,17 @@ var app = angular.module('myApp', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-            template: '<h1>default</h1>',
+        templateUrl: 'card.html',
         })
         .when('/about', {
-            templateUrl: 'about.html',
+            templateUrl: 'ngRoute/about.html',
             controller: 'myctr'
         })
         .when('/contact', {
-            templateUrl: 'contact.html',
+            templateUrl: 'ngRoute/contact.html',
+        })
+        .when('/api', {
+            templateUrl: 'angular_api/index.html',
         })
         .otherwise({
             redirectTo: '/'

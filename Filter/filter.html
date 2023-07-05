@@ -1,54 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="angular.js"></script>
-    <style>
-        img{
-            width: 150px;
-            height: 70px;
-        }
-    </style>
+   <title>Filter</title>    
 </head>
-<body ng-app="myapp" ng-controller="myctr" ng-init="fname='zeeshan'; lname='Ahmed'; amount=300;" >
-    
 
-     <h1> {{ fname | uppercase  }} </h1>
-     <h1> {{ lname | lowercase  }} </h1>
-     <h1>  {{ amount | currency:'Rs' }}</h1>
+<body ng-controller="filactr" ng-init="">
+    <div class="container">
+        <div class="container-fluid">
+            <center>
+                <h3>Filter</h3>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
+                    <input type="text" ng-model="mytext" class="form-control" placeholder="Search......." aria-label="Username"
+                        aria-describedby="addon-wrapping">                    
+                </div>
+            </div>
+        </div>
+       
 
-     <input type="text" ng-model="mytext" placeholder="search ......">
+        <table class="table table-info table-striped mt-3">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Profile</th>
+                </tr>
+            <tbody>
+                <tr ng-repeat="x in data | filter:mytext | orderBy:'id' | limitTo:'4'">
+                    <td>{{x.id}}</td>
+                    <td>{{x.name | uppercase }}</td>
+                    <td>{{x.city | uppercase }}</td>
+                    <td><img ng-src="{{ x.profile }}" alt=""></td>
+                </tr>
+            </tbody>
+        </table>
 
-     <table border="1">
-         <tr>
-             <th>ID</th>
-             <th>Name</th>
-             <th>Profile</th>
-             <th>City</th>
-         </tr>
-         <tr ng-repeat="x in data | filter:mytext | orderBy:'id' | limitTo:'2'">
-            <td>{{ x.id }}</td>
-            <td>{{ x.name }}</td>
-            <td><img ng-src="{{ x.profile }}" alt=""></td>
-            <td>{{ x.city }}</td>
-         </tr>
-     </table>
+    </div>
 
-     <script>
-         // mvc
-         var app = angular.module('myapp',[]);
-         app.controller('myctr',function($scope){
-            $scope.data = [
-                 {'id':101,'name':'ali','profile':'images/01.jpg','city':'karachi'},
-                 {'id':102,'name':'usman','profile':'images/01.jpg','city':'lahore'},
-                 {'id':103,'name':'zeeshan','profile':'images/01.jpg','city':'islambad'},
-                 {'id':104,'name':'ahmed','profile':'images/01.jpg','city':'karachi'}
-            ];
-         });
-     </script>
 
 </body>
+
 </html>

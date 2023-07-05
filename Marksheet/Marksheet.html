@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet on Angular</title>
+</head>
+
+<body ng-controller="markctr">
+
+    <div class="container w-50 p-2">
+        <h1 class="text-center">Input Data</h1>
+
+
+        <div class="input-group p-2">
+            <span class="input-group-text">Roll #</span>
+            <input type="text" ng-model="rollno" class="form-control" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group p-2">
+            <span class="input-group-text">Name</span>
+            <input type="text" ng-model="name" class="form-control" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group p-2">
+            <span class="input-group-text">Class and Section</span>
+            <input type="text" ng-model="class" aria-label="First name" class="form-control">
+            <input type="text" ng-model="section" aria-label="Last name" class="form-control">
+        </div>
+
+        <div class="input-group p-2">
+            <span class="input-group-text">Mathematics</span>
+            <input type="number" ng-model="maths" class="form-control" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group p-2">
+            <span class="input-group-text">Chemistry</span>
+            <input type="number" ng-model="chemistry" class="form-control" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group p-2">
+            <span class="input-group-text">Physics</span>
+            <input type="number" ng-model="physics" class="form-control" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+
+    </div>
+
+
+    <table class="table container p-2">
+        <h1 class="container text-center">Marksheet</h1>
+        <thead>
+            <tr>
+                <th scope="col">Roll #</th>
+                <th scope="col">Name</th>
+                <th scope="col">Class</th>
+                <th scope="col">Section</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" ng-bind="rollno"></th>
+                <td ng-bind="name"></td>
+                <td ng-bind="class"></td>
+                <td ng-bind="section"></td>
+            </tr>
+        </tbody>
+        <thead>
+            <tr>
+                <th scope="col">Mathematics</th>
+                <th scope="col">Chemistry</th>
+                <th scope="col">Physics</th>
+                <th scope="col">Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row" ng-bind="maths"></td>
+                <td ng-bind="chemistry"></td>
+                <td ng-bind="physics"></td>
+                <td>{{ calculatePercentage() }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

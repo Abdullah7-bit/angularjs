@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch in Dropdown</title>
+    
+</head>
+
+<body ng-app>
+    <div class="container">
+        <center>
+            <select ng-model="category">
+                <option value="">All Category</option>
+                <option value="Food">Food</option>
+                <option value="Electronic">Electronic</option>
+            </select>
+        </center>
+
+        <div ng-switch="category" class="container mt-2">
+
+            <div class="food container" ng-switch-when="Food">
+                <div class="row" id="Food">
+                    <h2 class="text-center m-3">Food.</h2>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="Images/paratha.jpg" class="card-img-top" style="height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Pakistani Paratha</h5>
+                                <p class="card-text">Paratha with juicy crushed patty inside.</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="Images/kbb.jpg" class="card-img-top" style="height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kebab</h5>
+                                <p class="card-text">From he famous streets of Karachi to your table.</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card  h-100" style="width: 18rem;">
+                            <img src="Images/kheer.jpg" class="card-img-top" style="height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kheer</h5>
+                                <p class="card-text">is it sour or sweet inside?</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="electronic container" ng-switch-when="Electronic">
+                <div class="row " id="Electronics">
+                    <h2 class="text-center ">Electronics</h2>
+
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./images/mob.jpeg" class="card-img-top" style="height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Oneplus 9 Pro</h5>
+                                <p class="card-text">Smartphone from chinese giant with all Cutting edge technology.
+                                </p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./images/m1.jpg" class="card-img-top " style="height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Apple Macbook Pro </h5>
+                                <p class="card-text">Here presenting the latest M1 chip in the laptop.</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./images/alpha.jpg" class="card-img-top " style="height: 250px;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sony Alpha 7III</h5>
+                                <p class="card-text">Cinematic Camera on commercial level.</p>
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-switch-default class="container">
+                <center>
+                    <h1>All Category</h1>
+                </center>
+                <div class="row" id="All">
+                    <div class="row ">
+                        <h4 class="text-center m-3">Electronics</h4>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./images/mob.jpeg" class="card-img-top" style="height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Oneplus 9 Pro</h5>
+                                    <p class="card-text">Smartphone from chinese giant with all Cutting edge technology.
+                                    </p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./images/m1.jpg" class="card-img-top" style="height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Apple Macbook Pro </h5>
+                                    <p class="card-text">Here presenting the latest M1 chip in the laptop.</p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./images/alpha.jpg" class="card-img-top" style="height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sony Alpha 7III</h5>
+                                    <p class="card-text">Cinematic Camera on commercial level.</p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4 class="text-center m-3">Food.</h4>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./images/paratha.jpg" class="card-img-top" style="height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pakistani Paratha</h5>
+                                    <p class="card-text">Paratha with juicy crushed patty inside.</p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./images/kbb.jpg" class="card-img-top" style="height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kebab</h5>
+                                    <p class="card-text">From he famous streets of Karachi to your table.</p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card h-100" style="width: 18rem;">
+                                <img src="./images/kheer.jpg" class="card-img-top" style="height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">Kheer</h5>
+                                    <p class="card-text">is it sour or sweet inside?</p>
+                                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

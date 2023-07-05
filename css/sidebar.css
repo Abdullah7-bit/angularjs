@@ -12,10 +12,10 @@
     }
 }
 
-body {
-    overflow: hidden;
+/* body {
+    overflow: hidden; 
 }
-
+*/
 main {
     display: flex;
     flex-wrap: nowrap;

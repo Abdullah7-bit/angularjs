@@ -1,17 +1,22 @@
 <header class="py-3 mb-3 border-bottom">
   <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
     <div class="dropdown">
-      <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none form-control
-         aria-expanded="false">
+      <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none form-control"
+        aria-expanded="false">
+
         <h4>AngularJS</h4>
       </a>
-      
+
     </div>
 
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center" ng-controller="wordctr">
       <form class="w-100 me-3">
-        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        <div class="d-flex">
+          <input type="text" class="form-control" placeholder="Search...." aria-label="Search" ng-model="name" ng-change="updateName()" maxlength="20">
+          <p class="mb-0 mx-2">Character limit: 20</p>
+        </div>
       </form>
     </div>
+    
   </div>
 </header>

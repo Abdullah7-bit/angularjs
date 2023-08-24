@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    
+
     <div ng-include="'navbar.html'"></div>
 
 
@@ -28,8 +28,8 @@
     </main>
 
 
-</div>
-</div>
+    </div>
+    </div>
     <!-- Bootstrap Links -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -37,6 +37,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+
+    <script>
+        // This code will run once the page is fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.innerWidth < 768) {
+                // Check if the screen width is less than 768 pixels (small screens)
+                var sidebarCollapse = new bootstrap.Collapse(document.getElementById("sidebarMenu"));
+                sidebarCollapse.hide(); // Collapse the sidebar on page load for small screens
+            }
+        });
+    </script>
 </body>
 
 </html>

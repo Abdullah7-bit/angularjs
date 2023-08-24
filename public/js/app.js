@@ -77,7 +77,7 @@ app.controller('myctr2', function ($scope) {
 // controller for local api
 app.controller('apictr', function ($scope, $http) {
 
-    $http.get("http://localhost/AngularJS/angular_api/mydata.json").then(function (response) {
+    $http.get("http://localhost/angularjs/public/angular_api/mydata.json").then(function (response) {
         $scope.persons = response.data.records;
     });
 

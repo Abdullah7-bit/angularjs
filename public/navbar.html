@@ -1,22 +1,86 @@
-<header class="py-3 mb-3 border-bottom">
-  <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-    <div class="dropdown">
-      <a href="#" class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none form-control"
-        aria-expanded="false">
-
-        <h4>AngularJS</h4>
-      </a>
-
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">AngularJS</a>
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+    data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <input type="text" class="form-control" placeholder="Search...." aria-label="Search" ng-model="name"
+    ng-change="updateName()" maxlength="20">
+  <div class="navbar-nav">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3" href="#">Character limit: 20</a>
     </div>
-
-    <div class="d-flex align-items-center" ng-controller="wordctr">
-      <form class="w-100 me-3">
-        <div class="d-flex">
-          <input type="text" class="form-control" placeholder="Search...." aria-label="Search" ng-model="name" ng-change="updateName()" maxlength="20">
-          <p class="mb-0 mx-2">Character limit: 20</p>
-        </div>
-      </form>
-    </div>
-    
   </div>
 </header>
+
+
+<!-- <div class="container-fluid"> -->
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#!/api">
+              <span data-feather="home"></span>
+              Local API
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/billsystem">
+              <span data-feather="file"></span>
+              Billsystem
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/ngmodel_show">
+              <span data-feather="shopping-cart"></span>
+              ngmodel_show
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/Filter">
+              <span data-feather="users"></span>
+              Filter
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/ngRepeat">
+              <span data-feather="bar-chart-2"></span>
+              ngRepeat
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/Marksheet">
+              <span data-feather="layers"></span>
+              Marksheet
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/Switch1">
+              <span data-feather="layers"></span>
+              Switch1
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#!/Switch2">
+              <span data-feather="layers"></span>
+              Switch2
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse"
+              data-bs-target="#orders-collapse" aria-expanded="false">
+              ngRoute
+            </button>
+            <div class="collapse" id="orders-collapse">
+              <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="#!/about" class="nav-link link-dark rounded">About</a></li>
+                <li><a href="#!/contact" class="nav-link link-dark rounded">Contacts</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+ 
